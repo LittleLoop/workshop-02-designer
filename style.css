@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap');
+:root {
+		--bodyFont: 'Pontano Sans', sans-serif;
+		--transition: .3s ease;
+		--gray: #333333;
+		--darkgray: #2e2e2e;
+		--yellow: #f3cd52;
+		--lightgray: rgba(255,255,255,0.4);
+		--white: #fff;
+		--font: 16px;
+}
+* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+}
+body {
+		font-family: var(--bodyFont);
+		background: var(--gray);
+		line-height: 1.7;
+		font-size: var(--font);
+}
+
+button {
+	text-transform: uppercase;
+	background: var(--yellow);
+	border: none;
+	padding: 15px 30px;
+	font-size: 1rem;
+	letter-spacing: 1px;
+}
+.container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+/* header */
+header {
+	background: var(--yellow);
+	text-align: center;
+	letter-spacing: 2px;
+}
+header nav {
+	margin-bottom: 30px;
+}
+header nav ul {
+	list-style: none;
+}
+header nav ul li{
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 30px 40px;
+}
+header nav ul li a {
+	text-decoration: none;
+	color: var(--gray);
+}
+
+header h1 {
+	font-size: 3rem;
+	margin-bottom: 20px;
+}
+
+header p {
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+	letter-spacing: 0px;
+}
+
+header img {
+	width: 100%;
+	border-top: 25px solid rgba(255, 255, 255, 0.5);
+	border-left: 25px solid rgba(255, 255, 255, 0.5);
+	border-right: 25px solid rgba(255, 255, 255, 0.5);
+	margin-bottom: -8px;
+}
+
+/* skills */
+.skills {
+	border-bottom: 1px solid var(--lightgray);
+	padding: 50px;
+}
+.skills article {
+	width: 33%;
+	float: left;
+	text-align: center;
+	padding: 40px;
+}
+
+.skills article h3 {
+	color: var(--white);
+	font-size: 2.5rem;
+	margin-bottom: 50px;
+}
+
+.skills article p {
+	color: var(--lightgray);
+	margin-bottom: 40px;
+	font-size: 1rem;
+}
+
+.skills::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+/* portfolio */
+.portfolio {
+	border-bottom: 1px solid var(--lightgray);
+	text-align: center;
+	padding: 50px;
+}
+.portfolio h2 {
+	color: var(--white);
+	font-size: 4rem;
+	letter-spacing: 5px;
+}
+
+.portfolio p {
+	color: var(--lightgray);
+	margin-bottom: 40px;
+	font-size: 1rem;
+}
+
+.portfolio article {
+	width: 25%;
+	float: left;
+	padding: 25px;
+}
+
+.portfolio::after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.portfolio article img {
+	width: 100%;
+}
+
+.portfolio article h3 {
+	font-size: 2rem;
+	color: var(--white);
+}
+
+/* contact */
+.contact {
+	border-bottom: 1px solid var(--lightgray);
+	text-align: center;
+	padding: 50px;
+}
+
+.contact h2 {
+	color: var(--white);
+	font-size: 4rem;
+	letter-spacing: 5px;
+}
+
+.contact p {
+	color: var(--lightgray);
+	margin-bottom: 40px;
+	font-size: 1.2rem;
+}
+
+.contact form {
+	width: 60%;
+	margin: 0 auto 50px;
+}
+
+.contact form input,
+.contact form textarea {
+	width: 100%;
+	font-size: 1.5rem;
+	padding: 10px;
+	margin: 10px;
+	color: var(--yellow);
+	background: var(--darkgray);
+	border: none;
+}
+
+.contact form textarea {
+	height: 300px;
+}
+
+.contact .social {
+	font-size: 2rem;
+	color: var(--gray);
+}
+
+.contact .social i {
+	background: var(--yellow);
+	padding: 15px;
+	margin: 0 15px;
+}
+
+/* footer */
+footer {
+	text-align: center;
+	color: var(--lightgray);
+	margin: 40px;
+}
+
+/* responsive */
+@media(max-width: 767px) {
+	.container {
+		width: 90%;
+	}
+
+	/* header */
+	header {
+		letter-spacing: 1px;
+	}
+
+	header nav {
+		margin-bottom: 10px;
+	}
+	
+	header nav ul li {
+		font-size: 0.9rem;
+		margin: 20px 2px;
+	}
+
+	header h1 {
+		font-size: 2rem;
+	}
+
+	header p {
+		margin-bottom: 30px;
+	}
+
+	header img {
+	border-top: 15px solid rgba(255, 255, 255, 0.5);
+	border-left: 15px solid rgba(255, 255, 255, 0.5);
+	border-right: 15px solid rgba(255, 255, 255, 0.5);
+	}
+
+	/* skills */
+	.skills {
+		padding: 60px 0;
+	}
+	
+	.skills article {
+		width: 100%;
+		padding: 0px 10px;
+	}
+
+	.skills article h3 {
+		font-size: 2rem;
+		margin-bottom: 20px;
+	}
+	.skills article p {
+		margin-bottom: 20px;
+	}
+
+	/* portfolio */
+	.portfolio {
+		padding: 40px 10px;
+	}
+
+	.portfolio h2 {
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
+
+	.portfolio article {
+		width: 100%;
+	}
+
+	/* contact */
+	.contact {
+		padding: 40px 0;
+	}
+
+	.contact h2 {
+		font-size: 2.5rem;
+	}
+
+	.contact form {
+		width: 90%;
+	}
+
+	.contact .social i {
+		margin: 0 7px;
+	}
+
+}
